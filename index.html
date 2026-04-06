@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="snake.css" />
+  </head>
+  <body>
+    <section id="hero">
+      <div class="box left-box">
+        <div id="box-content">
+          <span class="comment"
+            >//<span
+              class="scramble"
+              data-words="a f#cking idiot,yes i made this effect"
+              data-interval="1500"
+            ></span
+          ></span>
+          <span id="name">
+            tibe <br />
+            van den <br />
+            brande</span
+          >
+        </div>
+      </div>
+      <div id="divider"></div>
+      <div class="box right-box">
+        <div id="box-content">
+          <span class="comment">//about</span>
+          <br />
+          <span class="comment">//projects</span>
+          <br />
+          <div id="socials">
+            <a href="#" target="_blank" class="social">
+              <svg viewBox="0 0 20 20">
+                <use href="./images/github-logo.svg#github-shape"></use>
+              </svg>
+            </a>
+            <a href="#" target="_blank" class="social">
+              <svg viewBox="0 0 32 32">
+                <use href="./images/itch-io.svg#itchio-shape"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="left-box box">
+        <div id="box-content">
+          <span class="header comment">//about</span>
+
+          <div id="info">
+            <div class="topic">
+              <div class="line">
+                <span class="comment">//age</span>
+                <span class="age"></span>
+              </div>
+            </div>
+
+            <div class="topic">
+              <div class="line">
+                <span class="comment">//country</span>
+                Belgium
+              </div>
+            </div>
+
+            <div class="topic full-width">
+              <div class="line">
+                <span class="comment">//Languages</span>
+              </div>
+
+              <div class="icon-grid">
+                <div class="icon">
+                  <svg class="topic-icon" viewBox="0 0 18 20">
+                    <use href="./images/html.svg#html-shape"></use>
+                  </svg>
+                  <span>HTML</span>
+                </div>
+
+                <div class="icon">
+                  <svg class="topic-icon" viewBox="0 0 512 512">
+                    <use href="./images/css.svg#css-shape"></use>
+                  </svg>
+                  <span>CSS</span>
+                </div>
+
+                <div class="icon">
+                  <svg class="topic-icon" viewBox="0 0 512 512">
+                    <use href="./images/js.svg#js-shape"></use>
+                  </svg>
+                  <span>JS</span>
+                </div>
+
+                <div class="icon">
+                  <svg class="topic-icon" viewBox="0 0 16 16">
+                    <use href="./images/sql.svg#sql-shape"></use>
+                  </svg>
+                  <span>SQL</span>
+                </div>
+
+                <div class="icon">
+                  <svg class="topic-icon" viewBox="0 0 512 512">
+                    <use href="./images/java.svg#java-shape"></use>
+                  </svg>
+                  <span>Java</span>
+                </div>
+
+                <div class="icon">
+                  <svg class="topic-icon" viewBox="0 0 50 50">
+                    <use href="./images/csharp.svg#csharp-shape"></use>
+                  </svg>
+                  <span>C#</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="topic full-width">
+              <div class="line">
+                <span class="comment">//tools</span>
+              </div>
+
+              <div class="icon-grid">
+                <div class="icon">
+                  <svg class="topic-icon" viewBox="0 0 128 128">
+                    <use href="./images/unity.svg#unity-shape"></use>
+                  </svg>
+                  <span>Unity</span>
+                </div>
+
+                <div class="icon">
+                  <svg class="topic-icon" viewBox="0 0 32 32">
+                    <use href="./images/vscode.svg#vscode-shape"></use>
+                  </svg>
+                  <span>VSCODE</span>
+                </div>
+
+                <div class="icon">
+                  <svg class="topic-icon" viewBox="0 0 512 512">
+                    <use href="./images/blender.svg#blender-shape"></use>
+                  </svg>
+                  <span>Blender</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-box box">
+        <div id="box-content">
+          <span class="header comment">//about</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="snake-container">
+        <div id="snake-nav-bar">
+          <span id="title">snake</span>
+          <span class="score-txt">0</span>
+        </div>
+        <div id="snake-grid">
+          <div id="snake-overlay">
+            <div id="start-game">
+              <input onclick="StartGame()" type="button" value="play" />
+            </div>
+            <div id="end-game">
+              <div class="score">SCORE:<span class="score-txt">0</span></div>
+              <input onclick="StartGame()" type="button" value="Restart" />
+            </div>
+          </div>
+          <div id="snake-head"><div></div></div>
+        </div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+    <script src="snake.js"></script>
+  </body>
+</html>
