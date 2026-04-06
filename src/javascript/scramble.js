@@ -1,14 +1,3 @@
-var dob = new Date("03/21/2009");
-var month_diff = Date.now() - dob.getTime();
-var age_dt = new Date(month_diff);
-var year = age_dt.getUTCFullYear();
-var age = Math.abs(year - 1970);
-var ageTxt = document.querySelectorAll(".age");
-
-for (let i = 0; i < ageTxt.length; i++) {
-  ageTxt[i].textContent = age;
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".scramble").forEach((span) => {
     const words = span.dataset.words.split(",");
@@ -19,9 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 var scrambleChar = "<>!#@{}[]%$&*()+_-?/=";
-var scrambleCount = 5;
-var scrambleCharFreq = 75;
-var scrambleFreq = 50;
+var scrambleCount = 7; //Amount of scrambles for each letter
+var scrambleCharFreq = 100; //Time before scrambling next letter
+var scrambleFreq = 50; //Time before scrambling to next icon
 
 function ScrambleText(textObj, words, loopInterval) {
   var currentWord = 0;

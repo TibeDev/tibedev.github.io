@@ -10,32 +10,60 @@ html {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   padding: 0;
   margin: 0;
   background-color: var(--main-color);
   color: var(--accent-color1);
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
+}
+#cursor,
+#cursorOutline {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 50%;
+  display: flex;
+}
+#cursor {
+  border: 2px solid var(--accent-color1);
+}
+#cursorOutline {
+  transition: 0.15s ease-in-out;
+  transform: scale(100%);
+  border: 2px solid var(--accent-color2);
+}
+#cursorOutline.active {
+  transform: scale(0%);
 }
 section {
   width: 100%;
 }
+a {
+  text-decoration: none;
+  transition: 0.1s linear;
+}
 #hero {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100vh;
 }
 #hero .panel {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  flex-direction: column;
 }
 #hero .panel-left .panel-content {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 #hero .panel-left .comment {
@@ -44,19 +72,15 @@ section {
 #hero .panel-right .panel-content {
   width: 80%;
 }
-#hero .panel-right .panel-content span {
+#hero .panel-right .panel-content .comment {
   font-size: 4rem;
 }
 #name {
+  text-align: center;
   text-transform: uppercase;
   line-height: 0.95em;
   font-size: 9rem;
   font-weight: bolder;
-}
-#panel-divider {
-  background-color: var(--accent-color1);
-  width: 5px;
-  height: 90%;
 }
 .comment {
   color: var(--accent-color2);
@@ -64,7 +88,10 @@ section {
 }
 #social-links {
   display: flex;
-  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
 }
 .social-link {
   color: var(--accent-color2);
@@ -75,11 +102,7 @@ section {
   align-content: center;
   justify-content: center;
   transition: linear 0.2s;
-  border-radius: 100%;
-}
-.social-link:hover {
-  color: var(--accent-color1);
-  fill: var(--accent-color1);
+  transition: 0.05s;
 }
 .social-link svg {
   width: 100%;
@@ -89,7 +112,7 @@ section {
 #about {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  height: 80%;
 }
 #about .panel {
   display: flex;
@@ -161,6 +184,7 @@ section {
   transition: 0.3s;
 }
 .skill-badge:hover {
+  color: var(--accent-color2);
   background-color: var(--main-color2);
   border: 2px solid var(--accent-color2);
 }

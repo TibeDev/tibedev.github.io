@@ -7,8 +7,8 @@
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="snake.css" />
+    <link rel="stylesheet" href="./src/styling/style.css" />
+    <link rel="stylesheet" href="./src/styling/snake.css" />
   </head>
   <body>
     <section id="hero">
@@ -27,42 +27,35 @@
             brande</span
           >
         </div>
-      </div>
-      <div id="panel-divider"></div>
-      <div class="panel panel-right">
-        <div class="panel-content">
-          <span class="comment">&lt;about&gt;</span>
-          <br />
-          <span class="comment">&lt;projects&gt;</span>
-          <br />
-          <div id="social-links">
-            <a
-              href="https://github.com/TibeDev"
-              target="_blank"
-              class="social-link"
-            >
-              <svg viewBox="0 0 20 20">
-                <use href="./images/github-logo.svg#github-shape"></use>
-              </svg>
-            </a>
-            <a
-              href="https://tibe-dev.itch.io/"
-              target="_blank"
-              class="social-link"
-            >
-              <svg viewBox="0 0 32 32">
-                <use href="./images/itch-io.svg#itchio-shape"></use>
-              </svg>
-            </a>
-          </div>
+        <div id="social-links">
+          <a
+            href="https://github.com/TibeDev"
+            target="_blank"
+            class="social-link cursorHover"
+          >
+            <svg viewBox="0 0 20 20">
+              <use href="./images/github-logo.svg#github-shape"></use>
+            </svg>
+          </a>
+          <a
+            href="https://tibe-dev.itch.io/"
+            target="_blank"
+            class="social-link cursorHover"
+          >
+            <svg viewBox="0 0 32 32">
+              <use href="./images/itch-io.svg#itchio-shape"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </section>
 
+    <div class="divider"></div>
+
     <section id="about">
       <div class="panel panel-left">
         <div class="panel-content">
-          <span class="section-title comment">&lt;about&gt;</span>
+          <span class="section-title comment">&lt;/about&gt;</span>
 
           <div id="about-grid">
             <div class="about-item">
@@ -83,50 +76,78 @@
       </div>
       <div class="panel panel-right">
         <div class="panel-content">
-          <span class="section-title comment">&lt;skills&gt;</span>
+          <span class="section-title comment">&lt;/skills&gt;</span>
           <div id="about-grid">
+            <div class="about-item full-width">
+              <div class="about-item-row">
+                <span class="comment">//WHAT I DO</span>
+              </div>
+
+              <div class="skill-grid">
+                <div class="skill-badge cursorHover">
+                  <svg class="skill-icon" viewBox="0 0 56 56">
+                    <use href="./images/controller.svg#controller-shape"></use>
+                  </svg>
+                  <span>Game Dev</span>
+                </div>
+
+                <div class="skill-badge cursorHover">
+                  <svg class="skill-icon" viewBox="0 0 32 32">
+                    <use href="./images/globe.svg#globe-shape"></use>
+                  </svg>
+                  <span>Web Dev</span>
+                </div>
+
+                <div class="skill-badge cursorHover">
+                  <svg class="skill-icon" viewBox="0 0 24 24">
+                    <use href="./images/cube.svg#cube-shape"></use>
+                  </svg>
+                  <span>3D modeling</span>
+                </div>
+              </div>
+            </div>
             <div class="about-item full-width">
               <div class="about-item-row">
                 <span class="comment">//Languages</span>
               </div>
 
               <div class="skill-grid">
-                <div class="skill-badge">
+                <div class="skill-badge cursorHover">
                   <svg class="skill-icon" viewBox="0 0 18 20">
                     <use href="./images/html.svg#html-shape"></use>
                   </svg>
                   <span>HTML</span>
                 </div>
 
-                <div class="skill-badge">
+                <div class="skill-badge cursorHover">
                   <svg class="skill-icon" viewBox="0 0 512 512">
                     <use href="./images/css.svg#css-shape"></use>
                   </svg>
                   <span>CSS</span>
                 </div>
 
-                <div class="skill-badge">
+                <div class="skill-badge cursorHover">
                   <svg class="skill-icon" viewBox="0 0 512 512">
                     <use href="./images/js.svg#js-shape"></use>
                   </svg>
                   <span>JS</span>
                 </div>
 
-                <div class="skill-badge">
+                <div class="skill-badge cursorHover">
                   <svg class="skill-icon" viewBox="0 0 16 16">
                     <use href="./images/sql.svg#sql-shape"></use>
                   </svg>
                   <span>SQL</span>
                 </div>
 
-                <div class="skill-badge">
+                <div class="skill-badge cursorHover">
                   <svg class="skill-icon" viewBox="0 0 512 512">
                     <use href="./images/java.svg#java-shape"></use>
                   </svg>
                   <span>Java</span>
                 </div>
 
-                <div class="skill-badge">
+                <div class="skill-badge cursorHover">
                   <svg class="skill-icon" viewBox="0 0 50 50">
                     <use href="./images/csharp.svg#csharp-shape"></use>
                   </svg>
@@ -141,21 +162,21 @@
               </div>
 
               <div class="skill-grid">
-                <div class="skill-badge">
+                <div class="skill-badge cursorHover">
                   <svg class="skill-icon" viewBox="0 0 128 128">
                     <use href="./images/unity.svg#unity-shape"></use>
                   </svg>
                   <span>Unity</span>
                 </div>
 
-                <div class="skill-badge">
+                <div class="skill-badge cursorHover">
                   <svg class="skill-icon" viewBox="0 0 32 32">
                     <use href="./images/vscode.svg#vscode-shape"></use>
                   </svg>
                   <span>VSCODE</span>
                 </div>
 
-                <div class="skill-badge">
+                <div class="skill-badge cursorHover">
                   <svg class="skill-icon" viewBox="0 0 512 512">
                     <use href="./images/blender.svg#blender-shape"></use>
                   </svg>
@@ -168,27 +189,10 @@
       </div>
     </section>
 
-    <section id="projects">
-      <div class="snake-container">
-        <div id="snake-nav-bar">
-          <span id="title">snake</span>
-          <span class="score-txt">0</span>
-        </div>
-        <div id="snake-grid">
-          <div id="snake-overlay">
-            <div id="start-game">
-              <input onclick="StartGame()" type="button" value="play" />
-            </div>
-            <div id="end-game">
-              <div class="score">SCORE:<span class="score-txt">0</span></div>
-              <input onclick="StartGame()" type="button" value="Restart" />
-            </div>
-          </div>
-          <div id="snake-head"><div></div></div>
-        </div>
-      </div>
-    </section>
-    <script src="app.js"></script>
-    <script src="snake.js"></script>
+    <section id="projects"></section>
+    <script src="./src/javascript/cursor.js"></script>
+    <script src="./src/javascript/age.js"></script>
+    <script src="./src/javascript/snake.js"></script>
+    <script src="./src/javascript/scramble.js"></script>
   </body>
 </html>
