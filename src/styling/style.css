@@ -114,15 +114,6 @@ a {
   flex-direction: row;
   height: 80%;
 }
-#about-grid .about-item:nth-child(1) {
-  align-items: start;
-}
-#about-grid .about-item:nth-child(2) {
-  align-items: center;
-}
-#about-grid .about-item:nth-child(3) {
-  align-items: end;
-}
 #about .panel {
   display: flex;
   align-items: center;
@@ -163,7 +154,7 @@ a {
   align-items: center;
   gap: 1rem;
 }
-.skill-icon {
+.badge-icon {
   width: 1.5rem;
   height: 1.5rem;
   color: var(--accent-color2);
@@ -179,13 +170,13 @@ a {
 .full-width {
   grid-column: 1 / -1;
 }
-.skill-grid {
+.badge-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.7rem;
   width: 100%;
 }
-.skill-badge {
+.badge {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -199,22 +190,22 @@ a {
   border: 2px solid var(--main-color2);
   transition: 0.3s;
 }
-.skill-badge span {
+.badge span {
   font-size: 0.8rem;
 }
-.skill-badge .skill-icon {
+.badge .badge-icon {
   width: 2rem;
   height: 2rem;
   color: var(--accent-color1);
   fill: var(--accent-color1);
   transition: 0.3s;
 }
-.skill-badge:hover {
+.badge:hover {
   color: var(--accent-color2);
   background-color: var(--main-color2);
   border: 2px solid var(--accent-color2);
 }
-.skill-badge:hover .skill-icon {
+.badge:hover .badge-icon {
   color: var(--accent-color2);
   fill: var(--accent-color2);
 }
