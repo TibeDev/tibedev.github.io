@@ -1,4 +1,4 @@
-body {
+* {
   cursor: none;
 }
 #cursor {
@@ -12,6 +12,8 @@ body {
   width: 55px;
   aspect-ratio: 1;
 
-  border: 2px solid rgba(70, 70, 70, 0.463);
+  opacity: 0.55;
+
+  border: 2px solid rgb(70, 70, 70);
   border-radius: 50%;
 }
