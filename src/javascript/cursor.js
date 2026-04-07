@@ -1,41 +1,36 @@
-var cursor = document.getElementById("cursor");
-var cursorOutline = document.getElementById("cursorOutline");
-var cursorHoverEls = document.querySelectorAll(".cursorHover");
+var cursors = [];
 
-var cursorSize = 7;
-var cursorOutlineSize = 50;
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".cursor").forEach((cursor) => {
+    const duration = cursor.dataset.duration;
 
-cursor.style.width = cursorSize + "px";
-cursor.style.height = cursorSize + "px";
+    cursor.style.transform = "translate(-50%, -50%)";
+    cursor.style.position = "fixed";
+    cursor.style.pointerEvents = "none";
 
-cursorOutline.style.width = cursorOutlineSize + "px";
-cursorOutline.style.height = cursorOutlineSize + "px";
+    cursors.push({ obj: cursor, duration: duration });
+  });
+});
+
+var xPos;
+var yPos;
 
 document.body.onpointermove = (event) => {
   const { clientX, clientY } = event;
 
-  cursor.animate(
-    {
-      left: `${clientX - cursorSize / 2}px`,
-      top: `${clientY - cursorSize / 2}px`,
-    },
-    { duration: 0, fill: "forwards" },
-  );
+  xPos = clientX;
+  yPos = clientY;
 
-  cursorOutline.animate(
-    {
-      left: `${clientX - cursorOutlineSize / 2}px`,
-      top: `${clientY - cursorOutlineSize / 2}px`,
-    },
-    { duration: 500, fill: "forwards" },
-  );
+  for (let i = 0; i < cursors.length; i++) {
+    AnimateCursor(cursors[i]);
+  }
 };
-
-document.querySelectorAll(".cursorHover").forEach((el) => {
-  el.addEventListener("mouseenter", () => {
-    cursorOutline.classList.add("active");
-  });
-  el.addEventListener("mouseleave", () => {
-    cursorOutline.classList.remove("active");
-  });
-});
+function AnimateCursor(cursor) {
+  cursor.obj.animate(
+    {
+      left: `${xPos}px`,
+      top: `${yPos}px`,
+    },
+    { duration: parseInt(cursor.duration), fill: "forwards" },
+  );
+}
