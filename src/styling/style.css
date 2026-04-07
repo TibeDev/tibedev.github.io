@@ -114,6 +114,15 @@ a {
   flex-direction: row;
   height: 80%;
 }
+#about-grid .about-item:nth-child(1) {
+  align-items: start;
+}
+#about-grid .about-item:nth-child(2) {
+  align-items: center;
+}
+#about-grid .about-item:nth-child(3) {
+  align-items: end;
+}
 #about .panel {
   display: flex;
   align-items: center;
@@ -121,22 +130,34 @@ a {
   flex-direction: column;
   width: 100%;
 }
-#about-grid {
+#about .panel .panel-content {
+  max-width: 30rem;
+  height: 100%;
+}
+#about .panel .panel-content i {
+  text-align: justify;
+}
+#about-grid,
+#skills-grid {
   height: 100%;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(3, 1fr);
   align-content: start;
   row-gap: 1.5rem;
 }
-#about-grid > .about-item:not(.full-width):nth-child(even) {
-  display: flex;
-  align-items: end;
-}
+.skill-item,
 .about-item {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.5rem;
 }
+.about-item .about-item-content {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.skill-item-row,
 .about-item-row {
   display: flex;
   align-items: center;
@@ -150,6 +171,8 @@ a {
 }
 .section-title {
   display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 5rem;
   margin-bottom: 1rem;
 }
@@ -163,6 +186,9 @@ a {
   width: 100%;
 }
 .skill-badge {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
   display: flex;
   align-items: center;
   justify-content: center;
