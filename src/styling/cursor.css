@@ -1,19 +1,19 @@
 * {
-  cursor: none;
+    cursor: none;
 }
 #cursor {
-  width: 6px;
-  aspect-ratio: 1;
+    width: 6px;
+    aspect-ratio: 1;
 
-  border: 2px solid var(--accent-color1);
-  border-radius: 50%;
+    border: 2px solid var(--accent-color1);
+    border-radius: 50%;
 }
 #cursorOutline {
-  width: 55px;
-  aspect-ratio: 1;
+    width: 55px;
+    aspect-ratio: 1;
 
-  opacity: 0.55;
+    opacity: 0.55;
 
-  border: 2px solid rgb(70, 70, 70);
-  border-radius: 50%;
+    border: 2px solid rgb(70, 70, 70);
+    border-radius: 50%;
 }

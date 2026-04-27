@@ -1,8 +1,8 @@
 :root {
-  --main-color: #121212;
-  --main-color2: #0c0c0c;
-  --accent-color1: #bcb9b2;
-  --accent-color2: #fac118;
-  --accent-color3: #725600;
-  --padding: 16px;
+    --main-color: #121212;
+    --main-color2: #0c0c0c;
+    --accent-color1: #bcb9b2;
+    --accent-color2: #fac118;
+    --accent-color3: #c39301;
+    --padding: 16px;
 }
