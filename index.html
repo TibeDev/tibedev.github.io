@@ -1,278 +1,226 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./src/styling/style.css" />
-        <link rel="stylesheet" href="./src/styling/cursor.css" />
-    </head>
-    <body>
-        <div class="cursor" id="cursor" data-duration="0"></div>
-        <div class="cursor" id="cursorOutline" data-duration="500"></div>
-        <section id="hero">
-            <div class="panel panel-left">
-                <div class="panel-content">
-                    <span class="comment"
-                        >//<span
-                            class="scramble"
-                            data-words="a f#cking idiot"
-                            data-interval="1500"
-                        ></span
-                    ></span>
-                    <span id="name">
-                        tibe <br />
-                        van den <br />
-                        brande</span
-                    >
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styling/style.css" />
+    <link rel="stylesheet" href="./src/styling/cursor.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor" data-duration="0"></div>
+    <div class="cursor" id="cursorOutline" data-duration="500"></div>
+    <section id="hero">
+      <div class="panel panel-left">
+        <div class="panel-content">
+          <span class="comment"
+            >//<span
+              class="scramble"
+              data-words="a f#cking idiot"
+              data-interval="1500"
+            ></span
+          ></span>
+          <span id="name">
+            tibe <br />
+            van den <br />
+            brande</span
+          >
+        </div>
+        <div id="social-links">
+          <a
+            href="https://github.com/TibeDev"
+            target="_blank"
+            class="social-link cursorHover"
+          >
+            <svg viewBox="0 0 20 20">
+              <use href="./images/github-logo.svg#github-shape"></use>
+            </svg>
+          </a>
+          <a
+            href="https://tibe-dev.itch.io/"
+            target="_blank"
+            class="social-link cursorHover"
+          >
+            <svg viewBox="0 0 32 32">
+              <use href="./images/itch-io.svg#itchio-shape"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="about">
+      <div class="panel panel-left">
+        <div class="panel-content">
+          <span class="section-title comment">&lt;/about&gt;</span>
+
+          <div id="about-grid">
+            <div class="about-item full-width">
+              <div class="about-item-row">
+                <span class="comment">//ME</span>
+              </div>
+
+              <div class="badge-grid">
+                <div class="badge cursorHover">
+                  <svg class="badge-icon" viewBox="0 0 260 212">
+                    <use href="./images/belgium.svg#belgium-shape"></use>
+                  </svg>
+                  <span>Belgium</span>
                 </div>
-                <div id="social-links">
-                    <a
-                        href="https://github.com/TibeDev"
-                        target="_blank"
-                        class="social-link cursorHover"
-                    >
-                        <svg viewBox="0 0 20 20">
-                            <use
-                                href="./images/github-logo.svg#github-shape"
-                            ></use>
-                        </svg>
-                    </a>
-                    <a
-                        href="https://tibe-dev.itch.io/"
-                        target="_blank"
-                        class="social-link cursorHover"
-                    >
-                        <svg viewBox="0 0 32 32">
-                            <use href="./images/itch-io.svg#itchio-shape"></use>
-                        </svg>
-                    </a>
+
+                <div class="badge cursorHover">
+                  <svg class="badge-icon" viewBox="0 0 16 16">
+                    <use href="./images/hourglass.svg#hourglass-shape"></use>
+                  </svg>
+                  <span>17y/o</span>
                 </div>
-            </div>
-        </section>
 
-        <div class="divider"></div>
-
-        <section id="about">
-            <div class="panel panel-left">
-                <div class="panel-content">
-                    <span class="section-title comment">&lt;/about&gt;</span>
-
-                    <div id="about-grid">
-                        <div class="about-item full-width">
-                            <div class="about-item-row">
-                                <span class="comment">//ME</span>
-                            </div>
-
-                            <div class="badge-grid">
-                                <div class="badge cursorHover">
-                                    <svg
-                                        class="badge-icon"
-                                        viewBox="0 0 260 212"
-                                    >
-                                        <use
-                                            href="./images/belgium.svg#belgium-shape"
-                                        ></use>
-                                    </svg>
-                                    <span>Belgium</span>
-                                </div>
-
-                                <div class="badge cursorHover">
-                                    <svg class="badge-icon" viewBox="0 0 16 16">
-                                        <use
-                                            href="./images/hourglass.svg#hourglass-shape"
-                                        ></use>
-                                    </svg>
-                                    <span>17y/o</span>
-                                </div>
-
-                                <div class="badge cursorHover">
-                                    <svg class="badge-icon" viewBox="0 0 32 32">
-                                        <use
-                                            href="./images/education.svg#education-shape"
-                                        ></use>
-                                    </svg>
-                                    <span>IT</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="about-item full-width">
-                            <span class="comment">//QUICK INFO</span>
-                            <i
-                                >I've been doing
-                                <span class="comment">game dev</span> since
-                                <span class="comment">2021</span>, <br />with
-                                some <span class="comment">3D modeling</span> on
-                                the side, and have been getting into
-                                <span class="comment">web dev</span> for the
-                                past <span class="comment">year</span> or so.</i
-                            >
-                        </div>
-                    </div>
+                <div class="badge cursorHover">
+                  <svg class="badge-icon" viewBox="0 0 32 32">
+                    <use href="./images/education.svg#education-shape"></use>
+                  </svg>
+                  <span>IT</span>
                 </div>
+              </div>
             </div>
 
-            <div class="panel panel-right">
-                <div class="panel-content">
-                    <div></div>
-                    <span class="section-title comment">&lt;/skills&gt;</span>
-                    <div id="skills-grid">
-                        <div class="skill-item full-width">
-                            <div class="skill-item-row">
-                                <span class="comment">//WHAT I DO</span>
-                            </div>
-
-                            <div class="badge-grid">
-                                <div class="badge cursorHover">
-                                    <svg class="badge-icon" viewBox="0 0 56 56">
-                                        <use
-                                            href="./images/controller.svg#controller-shape"
-                                        ></use>
-                                    </svg>
-                                    <span>Game Dev</span>
-                                </div>
-
-                                <div class="badge cursorHover">
-                                    <svg class="badge-icon" viewBox="0 0 32 32">
-                                        <use
-                                            href="./images/globe.svg#globe-shape"
-                                        ></use>
-                                    </svg>
-                                    <span>Web Dev</span>
-                                </div>
-
-                                <div class="badge cursorHover">
-                                    <svg class="badge-icon" viewBox="0 0 24 24">
-                                        <use
-                                            href="./images/cube.svg#cube-shape"
-                                        ></use>
-                                    </svg>
-                                    <span>3D modeling</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="about-item full-width">
-                            <div class="about-item-row">
-                                <span class="comment">//Languages</span>
-                            </div>
-
-                            <div class="badge-grid">
-                                <div class="badge cursorHover">
-                                    <svg class="badge-icon" viewBox="0 0 18 20">
-                                        <use
-                                            href="./images/html.svg#html-shape"
-                                        ></use>
-                                    </svg>
-                                    <span>HTML</span>
-                                </div>
-
-                                <div class="badge cursorHover">
-                                    <svg
-                                        class="badge-icon"
-                                        viewBox="0 0 512 512"
-                                    >
-                                        <use
-                                            href="./images/css.svg#css-shape"
-                                        ></use>
-                                    </svg>
-                                    <span>CSS</span>
-                                </div>
-
-                                <div class="badge cursorHover">
-                                    <svg
-                                        class="badge-icon"
-                                        viewBox="0 0 512 512"
-                                    >
-                                        <use
-                                            href="./images/js.svg#js-shape"
-                                        ></use>
-                                    </svg>
-                                    <span>JS</span>
-                                </div>
-
-                                <div class="badge cursorHover">
-                                    <svg class="badge-icon" viewBox="0 0 16 16">
-                                        <use
-                                            href="./images/sql.svg#sql-shape"
-                                        ></use>
-                                    </svg>
-                                    <span>SQL</span>
-                                </div>
-
-                                <div class="badge cursorHover">
-                                    <svg
-                                        class="badge-icon"
-                                        viewBox="0 0 512 512"
-                                    >
-                                        <use
-                                            href="./images/java.svg#java-shape"
-                                        ></use>
-                                    </svg>
-                                    <span>Java</span>
-                                </div>
-
-                                <div class="badge cursorHover">
-                                    <svg class="badge-icon" viewBox="0 0 50 50">
-                                        <use
-                                            href="./images/csharp.svg#csharp-shape"
-                                        ></use>
-                                    </svg>
-                                    <span>C#</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="about-item full-width">
-                            <div class="about-item-row">
-                                <span class="comment">//tools</span>
-                            </div>
-
-                            <div class="badge-grid">
-                                <div class="badge cursorHover">
-                                    <svg
-                                        class="badge-icon"
-                                        viewBox="0 0 128 128"
-                                    >
-                                        <use
-                                            href="./images/unity.svg#unity-shape"
-                                        ></use>
-                                    </svg>
-                                    <span>Unity</span>
-                                </div>
-
-                                <div class="badge cursorHover">
-                                    <svg class="badge-icon" viewBox="0 0 32 32">
-                                        <use
-                                            href="./images/vscode.svg#vscode-shape"
-                                        ></use>
-                                    </svg>
-                                    <span>VSCODE</span>
-                                </div>
-
-                                <div class="badge cursorHover">
-                                    <svg
-                                        class="badge-icon"
-                                        viewBox="0 0 512 512"
-                                    >
-                                        <use
-                                            href="./images/blender.svg#blender-shape"
-                                        ></use>
-                                    </svg>
-                                    <span>Blender</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="about-item full-width">
+              <span class="comment">//QUICK INFO</span>
+              <i
+                >I've been doing <span class="comment">game dev</span> since
+                <span class="comment">2021</span>, <br />with some
+                <span class="comment">3D modeling</span> on the side, and have
+                been getting into <span class="comment">web dev</span> for the
+                past <span class="comment">year</span> or so.</i
+              >
             </div>
-        </section>
-        <script src="./src/javascript/cursor.js"></script>
-        <script src="./src/javascript/age.js"></script>
-        <script src="./src/javascript/scramble.js"></script>
-    </body>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-right">
+        <div class="panel-content">
+          <div></div>
+          <span class="section-title comment">&lt;/skills&gt;</span>
+          <div id="skills-grid">
+            <div class="skill-item full-width">
+              <div class="skill-item-row">
+                <span class="comment">//WHAT I DO</span>
+              </div>
+
+              <div class="badge-grid">
+                <div class="badge cursorHover">
+                  <svg class="badge-icon" viewBox="0 0 56 56">
+                    <use href="./images/controller.svg#controller-shape"></use>
+                  </svg>
+                  <span>Game Dev</span>
+                </div>
+
+                <div class="badge cursorHover">
+                  <svg class="badge-icon" viewBox="0 0 32 32">
+                    <use href="./images/globe.svg#globe-shape"></use>
+                  </svg>
+                  <span>Web Dev</span>
+                </div>
+
+                <div class="badge cursorHover">
+                  <svg class="badge-icon" viewBox="0 0 24 24">
+                    <use href="./images/cube.svg#cube-shape"></use>
+                  </svg>
+                  <span>3D modeling</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-item full-width">
+              <div class="about-item-row">
+                <span class="comment">//Languages</span>
+              </div>
+
+              <div class="badge-grid">
+                <div class="badge cursorHover">
+                  <svg class="badge-icon" viewBox="0 0 18 20">
+                    <use href="./images/html.svg#html-shape"></use>
+                  </svg>
+                  <span>HTML</span>
+                </div>
+
+                <div class="badge cursorHover">
+                  <svg class="badge-icon" viewBox="0 0 512 512">
+                    <use href="./images/css.svg#css-shape"></use>
+                  </svg>
+                  <span>CSS</span>
+                </div>
+
+                <div class="badge cursorHover">
+                  <svg class="badge-icon" viewBox="0 0 512 512">
+                    <use href="./images/js.svg#js-shape"></use>
+                  </svg>
+                  <span>JS</span>
+                </div>
+
+                <div class="badge cursorHover">
+                  <svg class="badge-icon" viewBox="0 0 16 16">
+                    <use href="./images/sql.svg#sql-shape"></use>
+                  </svg>
+                  <span>SQL</span>
+                </div>
+
+                <div class="badge cursorHover">
+                  <svg class="badge-icon" viewBox="0 0 512 512">
+                    <use href="./images/java.svg#java-shape"></use>
+                  </svg>
+                  <span>Java</span>
+                </div>
+
+                <div class="badge cursorHover">
+                  <svg class="badge-icon" viewBox="0 0 50 50">
+                    <use href="./images/csharp.svg#csharp-shape"></use>
+                  </svg>
+                  <span>C#</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-item full-width">
+              <div class="about-item-row">
+                <span class="comment">//tools</span>
+              </div>
+
+              <div class="badge-grid">
+                <div class="badge cursorHover">
+                  <svg class="badge-icon" viewBox="0 0 128 128">
+                    <use href="./images/unity.svg#unity-shape"></use>
+                  </svg>
+                  <span>Unity</span>
+                </div>
+
+                <div class="badge cursorHover">
+                  <svg class="badge-icon" viewBox="0 0 32 32">
+                    <use href="./images/vscode.svg#vscode-shape"></use>
+                  </svg>
+                  <span>VSCODE</span>
+                </div>
+
+                <div class="badge cursorHover">
+                  <svg class="badge-icon" viewBox="0 0 512 512">
+                    <use href="./images/blender.svg#blender-shape"></use>
+                  </svg>
+                  <span>Blender</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./src/javascript/cursor.js"></script>
+    <script src="./src/javascript/age.js"></script>
+    <script src="./src/javascript/scramble.js"></script>
+  </body>
 </html>
